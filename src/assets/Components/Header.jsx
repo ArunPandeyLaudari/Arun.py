@@ -58,7 +58,7 @@ const Header = () => {
               whileTap={{ scale: 0.95 }}
             >
               <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-indigo-500 rounded-lg transform group-hover:scale-110 transition-transform duration-300"></span>
-              <span className="relative z-10 block px-4 py-2 text-white text-sm font-medium rounded-lg shadow-lg">
+              <span className="relative z-10 block px-4 py-3 text-white text-sm font-medium rounded-lg shadow-lg">
                Let's Craft Something Together
               </span>
             </motion.a>
@@ -83,14 +83,14 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white backdrop-blur-lg absolute top-16 left-0 right-0 shadow-xl border-t border-purple-900/20"
+            className="md:hidden bg-white text-white rounded-lg  backdrop-blur-lg absolute top-16 left-0 right-0 shadow-xl border-t ml-52 border-purple-900/20"
           >
             <div className="px-4 pt-4 pb-6 space-y-4">
               {navItems.map((item) => (
                 <motion.a
                   key={item.id}
                   href={`#${item.id}`}
-                  className="block py-3 text-xl px-4 text-white/90 hover:text-purple-300 rounded-lg hover:bg-purple-900/10 transition-all font-medium"
+                  className="block py-1 text-xl  text-black hover:text-purple-300 rounded-lg hover:bg-purple-900/10 transition-all font-medium"
                   onClick={() => setMenuOpen(false)}
                   whileHover={{ x: 5 }}
                 >
@@ -98,14 +98,15 @@ const Header = () => {
                 </motion.a>
               ))}
               
-              <div className="flex justify-center gap-6 pt-2">
+              <div className="flex justify-center gap-6 pt-1">
                 {socialIcons.map((social, index) => (
                   <motion.a
                     key={index}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white/70 hover:text-purple-300 p-2"
+                    className="text-black hover:text-purple-300 p-2 rounded-full transition-all duration-300"
+                    whileTap={{ scale: 0.9 }}
                     whileHover={{ y: -3, scale: 1.1 }}
                   >
                     <social.icon size={18} />
@@ -115,7 +116,7 @@ const Header = () => {
 
               <motion.a
                 href="#contact"
-                className="block mt-4 text-xl py-3 px-4 bg-gradient-to-r from-purple-600 to-indigo-500 text-white rounded-lg text-center font-medium shadow-lg"
+                className="block mt-4 text-xl py-3 px-4 bg-black text-white rounded-lg text-center font-medium shadow-lg"
                 onClick={() => setMenuOpen(false)}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

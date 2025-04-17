@@ -157,8 +157,12 @@ export default function HeroSection() {
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-4 bg-slate-800/80 backdrop-blur-sm border border-slate-700 text-slate-200 rounded-lg hover:bg-slate-700 transition-all hover:border-slate-600"
               >
-                <HiOutlineEye size={18} className="mr-2 inline-block" />
+                <HiOutlineEye size={18} className="mr-2 inline-block " />
+               <a href="path/to/ArunCv.pdf" download="ArunCv.pdf" className=" cursor-pointer ">
+              <span className='text-white '>
                 View Resume
+              </span>
+               </a>
               </motion.button>
             </div>
 
