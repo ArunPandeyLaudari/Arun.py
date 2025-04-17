@@ -263,7 +263,7 @@ const Service = () => {
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === category.id 
                 ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-500/20' 
-                : 'bg-gray-900/50 text-gray-400 border border-gray-800 hover:border-purple-500/30'
+                : 'bg-gray-900 text-gray-300 border border-gray-800 hover:border-purple-500/30'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

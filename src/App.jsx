@@ -15,7 +15,7 @@ import ContactSection from './assets/Components/ContactSection';
 
 function App() {
   return (
-    <div>
+    <div className="bg-black text-white min-h-screen flex flex-col">
       <Header />
       <HeroSection />
       <Service />

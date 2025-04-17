@@ -97,7 +97,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <div className="relative bg-slate-950 text-white min-h-screen w-full overflow-hidden">
+    <div className="relative bg-black-950 text-white min-h-screen w-full overflow-hidden">
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(#0f172a_1px,transparent_1px)] bg-[size:40px_40px] opacity-20 z-0"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-slate-950 to-purple-900/10 z-0"></div>
@@ -147,7 +147,7 @@ export default function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-blue-600/20 transition-all duration-300 shadow-lg flex items-center"
+                className="group px-8 py-4 bg-purple-900 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-blue-600/20 transition-all duration-300 shadow-lg flex items-center"
               >
                 Let's Connect
                 <HiOutlineArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -155,11 +155,11 @@ export default function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 py-4 bg-slate-800/80 backdrop-blur-sm border border-slate-700 text-slate-200 rounded-lg hover:bg-slate-700 transition-all hover:border-slate-600"
+                className="px-8 py-4 bg-white backdrop-blur-sm border border-slate-700 text-black rounded-lg hover:bg-black-700 transition-all hover:border-slate-600"
               >
                 <HiOutlineEye size={18} className="mr-2 inline-block " />
                <a href="path/to/ArunCv.pdf" download="ArunCv.pdf" className=" cursor-pointer ">
-              <span className='text-white '>
+              <span className='text-black '>
                 View Resume
               </span>
                </a>
@@ -167,17 +167,17 @@ export default function HeroSection() {
             </div>
 
             {/* Tabbed Skills/Experience/Education */}
-            <div className="bg-slate-900/60 backdrop-blur-md rounded-xl border border-slate-800/60 mt-12 shadow-xl p-6">
+            <div className="bg-black backdrop-blur-md rounded-xl border border-slate-800/60 mt-12 shadow-xl p-6">
               {/* Tabs */}
-              <div className="flex justify-between mb-6 p-1 bg-slate-800/50 rounded-lg">
+              <div className="flex justify-between mb-6 gap-8 p-1 bg-black rounded-lg">
                 {tabs.map((tab) => (
                   <motion.button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className={`flex items-center justify-center flex-1 py-3 px-4 rounded-lg font-medium transition-all ${activeTab === tab.id
-                      ? 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md'
+                    className={`flex items-center justify-center bg-gray-800 flex-1 py-3  px-4 rounded-lg font-medium transition-all ${activeTab === tab.id
+                      ? 'bg-purple-900 text-white shadow-md'
                       : 'text-slate-400 hover:text-white'
                       }`}
                   >
@@ -202,11 +202,11 @@ export default function HeroSection() {
                         {Object.entries(skills).map(([category, skillList]) => (
                           <div
                             key={category}
-                            className="flex flex-col md:flex-row items-start md:items-center gap-4 border-b border-slate-700 pb-4"
+                            className="flex  flex-col md:flex-row items-start md:items-center gap-4 border-b border-slate-700 pb-4"
                           >
                             {/* Left: Category Name */}
                             <div className="w-full md:w-1/4">
-                              <h4 className="text-slate-200 font-semibold text-lg capitalize">
+                              <h4 className="text-slate-200  font-semibold text-lg capitalize">
                                 {category}
                               </h4>
                             </div>
@@ -217,7 +217,7 @@ export default function HeroSection() {
                                 <motion.div
                                   key={text}
                                   whileHover={{ y: -2 }}
-                                  className="flex items-center px-3 py-2 rounded-md bg-slate-800/70 hover:bg-slate-700/70 border border-slate-700 transition-all"
+                                  className="flex items-center px-3 py-2 rounded-md bg-black  border border-slate-700 transition-all"
                                 >
                                   <div
                                     className={`w-8 h-8 flex items-center justify-center rounded-md bg-${color}-500/20 mr-2`}
@@ -240,7 +240,7 @@ export default function HeroSection() {
                           <motion.div
                             key={index}
                             whileHover={{ x: 5 }}
-                            className="flex justify-between items-center bg-slate-800/70 p-4 rounded-lg border border-slate-700/50 hover:border-slate-600/50 transition-all"
+                            className="flex justify-between items-center bg-black p-4 rounded-lg border border-slate-700/50 hover:border-slate-600/50 transition-all"
                           >
                             <div className="flex items-center">
                               <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-blue-500/20 mr-4">
@@ -251,7 +251,7 @@ export default function HeroSection() {
                                 <p className="text-sm text-slate-400">{exp.company}</p>
                               </div>
                             </div>
-                            <span className="px-3 py-1 text-xs bg-slate-700 text-slate-300 rounded-full">{exp.period}</span>
+                            <span className="px-3 py-1 text-xs bg-black text-slate-300 rounded-full">{exp.period}</span>
                           </motion.div>
                         ))}
                       </div>
@@ -263,7 +263,7 @@ export default function HeroSection() {
                           <motion.div
                             key={index}
                             whileHover={{ x: 5 }}
-                            className="flex justify-between items-center bg-slate-800/70 p-4 rounded-lg border border-slate-700/50 hover:border-slate-600/50 transition-all"
+                            className="flex justify-between items-center bg-black p-4 rounded-lg border border-slate-700/50 hover:border-slate-600/50 transition-all"
                           >
                             <div className="flex items-center">
                               <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-purple-500/20 mr-4">
@@ -274,7 +274,7 @@ export default function HeroSection() {
                                 <p className="text-sm text-slate-400">{edu.institution}</p>
                               </div>
                             </div>
-                            <span className="px-3 py-1 text-xs bg-slate-700 text-slate-300 rounded-full">{edu.period}</span>
+                            <span className="px-3 py-1 text-xs bg-black text-slate-300 rounded-full">{edu.period}</span>
                           </motion.div>
                         ))}
                       </div>
@@ -296,7 +296,7 @@ export default function HeroSection() {
                   href="#"
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group flex items-center space-x-2 px-4 py-2 bg-slate-800/70 rounded-lg hover:bg-slate-700 transition border border-slate-700/50 hover:border-slate-600"
+                  className="group flex items-center space-x-2 px-4 py-2 bg-black rounded-lg hover:bg-black transition border border-slate-700/50 hover:border-slate-600"
                 >
                   <item.icon size={18} className="text-slate-400 group-hover:text-white transition-colors" />
                   <span className="text-sm font-medium text-slate-300 group-hover:text-white">{item.label}</span>
@@ -312,7 +312,7 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 0.4 }}
             className="w-full lg:w-1/2 lg:pl-4"
           >
-            <div className="relative p-8 bg-slate-900/70 rounded-2xl border border-slate-700/50 shadow-2xl w-full backdrop-blur-md overflow-hidden">
+            <div className="relative p-8 bg-black rounded-2xl border border-slate-700/50 shadow-2xl w-full backdrop-blur-md overflow-hidden">
               {/* Glow Effects */}
               <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-300 rounded-lg opacity-20 blur-xl"></div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full opacity-20 blur-xl"></div>
@@ -324,7 +324,7 @@ export default function HeroSection() {
                   <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
                   <span className="w-3 h-3 rounded-full bg-green-400"></span>
                 </div>
-                <div className="w-28 h-4 bg-slate-700 rounded-md"></div>
+                <div className="w-28 h-4 bg-black rounded-md"></div>
               </div>
 
               {/* Profile */}
@@ -397,7 +397,7 @@ export default function HeroSection() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="p-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 transition text-white shadow-lg flex items-center justify-center group"
+                  className="p-3 rounded-full bg-gray-800 hover:from-blue-700 hover:to-cyan-600 transition text-white shadow-lg flex items-center justify-center group"
                 >
                   <span className="mr-2 text-sm">Explore</span>
                   <FiArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
