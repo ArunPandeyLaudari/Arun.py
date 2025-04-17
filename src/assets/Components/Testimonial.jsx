@@ -526,6 +526,7 @@ export default function Testimonial() {
                 whileTap={{ scale: 0.95 }}
               >
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
+                
               </motion.button>
             ))}
           </div>
